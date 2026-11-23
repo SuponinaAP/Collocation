@@ -80,10 +80,10 @@ Both projects share the same algorithmic foundation:
 
 ### Spectral Interpolation Research (`Interpolation/`)
 
-![Smooth function interpolation](interpolation_smooth_n15.png)
+![Smooth function interpolation](interpolation_smooth_n15.PNG)
 *Smooth function f₁(x) = exp(α(x²−1)) interpolated on Chebyshev–Lobatto grid, n=15. Exponential convergence confirmed.*
 
-![Non-smooth function interpolation](interpolation_nonsmooth_n26.png)
+![Non-smooth function interpolation](interpolation_nonsmooth_n26.PNG)
 *Non-smooth function f₄(x) = |x−a| on Chebyshev–Gauss grid, n=26. Algebraic convergence near the singularity point.*
 
 ## Publications
