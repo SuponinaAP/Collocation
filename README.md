@@ -67,15 +67,24 @@ Both projects share the same algorithmic foundation:
 
 ## Validation & Results
 
-The solvers were validated against analytical solutions:
-- **Polynomial loads:** machine precision achieved at N ≥ 4
-- **Smooth trigonometric loads:** exponential convergence confirmed; machine precision at N ≥ 18
-- **Non-smooth functions:** algebraic convergence, requires larger N near singular points
-
-*(Add screenshots below if available)*
+### Cantilever Beam Modeling (`Diff_Int_Matrix/`)
 
 ![Cantilever GUI](screenshots/cantilever_gui.png)
-![Interpolation comparison](screenshots/interpolation_results.png)
+*Interactive VCL GUI: input parameters (E, I, L, q₀, N), load type selector, boundary conditions panel, and real-time deflection chart.*
+
+![Cantilever deflection - cosine load](screenshots/cantilever_cosine_N18.png)
+*Cosine distributed load at N=18: numerical solution (blue) coincides with analytical (red). Max residual ≈ 10⁻¹⁸.*
+
+![Cantilever contact interaction](screenshots/cantilever_contact_force.png)
+*Non-zero boundary conditions: tip force F = 10⁻⁹ N with bending moment — cubic correction successfully handles the BCs.*
+
+### Spectral Interpolation Research (`Interpolation/`)
+
+![Smooth function interpolation](screenshots/interpolation_smooth_n15.png)
+*Smooth function f₁(x) = exp(α(x²−1)) interpolated on Chebyshev–Lobatto grid, n=15. Exponential convergence confirmed.*
+
+![Non-smooth function interpolation](screenshots/interpolation_nonsmooth_n26.png)
+*Non-smooth function f₄(x) = |x−a| on Chebyshev–Gauss grid, n=26. Algebraic convergence near the singularity point.*
 
 ## Publications
 
